@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -19,27 +19,27 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-nav{
+nav {
   display: flex;
   width: 100vw;
   justify-content: flex-start;
-  padding: 1rem ;
-  background-color: rgba(233, 152, 170, 0.5)
+  padding: 1rem;
+  background-color: rgba(233, 152, 170, 0.5);
 }
 
-a{
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
   display: flex;
@@ -50,21 +50,20 @@ footer {
   bottom: 0;
   width: 100%;
   height: 40px;
-  margin-top: 2rem;
-  background-color: rgba(233, 152, 170, 0.5)
+  margin-top: 13rem;
+  background-color: rgba(233, 152, 170, 0.5);
 }
 
-footer > img{
+footer > img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
- 
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -73,7 +72,7 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -81,36 +80,41 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
-  max-height: 100%; 
+  max-height: 100%;
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
   width: 90vw;
   flex-wrap: wrap;
   margin: 0 auto;
+  /* background-color: black;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center; */
 }
-.card > img{
+.card > img {
   width: 180px;
   margin: 0;
   object-fit: cover;
 }
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -120,10 +124,18 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
 .dark > a {
   color: white;
+}
+.err {
+  color: red;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }

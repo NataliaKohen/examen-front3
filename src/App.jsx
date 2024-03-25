@@ -5,11 +5,14 @@ import Favs from './Routes/Favs';
 import Detail from './Routes/Detail';
 import Contact from './Routes/Contact';
 import NotFound from './Routes/NotFound';
-
+import { ContextProvider } from './Components/utils/global.context';
 
 function App() {
+  
   return (
+    
     <BrowserRouter>
+    <ContextProvider>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -20,6 +23,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </ContextProvider>
     </BrowserRouter>
   );
 }

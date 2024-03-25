@@ -6,7 +6,6 @@ const Form = () => {
 
   const [user, setUser] = useState({
     name: '',
-    lastName: '',
     email: '',
   });
   const [error, setError] = useState(false);
@@ -15,14 +14,14 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setMostrar(true);
-    if (!user.name.length >= 5 ||!user.lastName || !emailRegex.test(user.email)) {
-      setError(true);
-    } else {
+    if (user.name.trim().length >= 5 && emailRegex.test(user.email)) {
+      setMostrar(true);
       setError(false);
+    } else {
+      setError(true);
     }
   };
-  
+
   const handleOnchange = (event) => {
     const { name, value } = event.target;
     setUser({ ...user, [name]: value });
@@ -32,8 +31,7 @@ const Form = () => {
     <div>
       {mostrar ? (
         <h3>
-          **Gracias {user.name} {user.lastName}, te contactaremos cuando antes
-          vía mail**
+          **Gracias {user.name} , te contactaremos cuando antes vía mail**
         </h3>
       ) : (
         <form onSubmit={handleSubmit}>
@@ -41,14 +39,7 @@ const Form = () => {
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
-            onChange={handleOnchange}
-          />
-          <label>Last Name</label>
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Enter your last name"
+            placeholder="Enter your full name"
             onChange={handleOnchange}
           />
           <label>E-mail</label>
@@ -60,7 +51,11 @@ const Form = () => {
           />
           <button type="submit">Submit</button>
 
-          {error && <p>**Por favor verifique su información nuevamente**</p>}
+          {error && (
+            <p className="err">
+              **Por favor verifique su información nuevamente**
+            </p>
+          )}
         </form>
       )}
     </div>
