@@ -13,12 +13,11 @@ const Favs = () => {
         {state.favs.length > 0
           ? state.favs.map((favorite) => (
               <div className="card" key={favorite.id}>
-                <h5>{favorite.id}</h5>
-                <h2>{favorite.name}</h2>
-                <h3>{favorite.username}</h3>
+                <h3>{favorite.name}</h3>
+                <h4> {favorite.id} {favorite.username}</h4>
                 <img src="images/doctor.jpg" alt="imagen dentista" />
 
-                <button
+                <button className='favButton'
                   onClick={() =>
                     dispatch({ type: 'REMOVE_FAV', payload: favorite.id })
                   }

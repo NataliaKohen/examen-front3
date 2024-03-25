@@ -13,6 +13,7 @@ code {
 }
 .favButton {
   background-color: rgba(136, 136, 136, 0.116);
+  margin: 5px;
   padding: 10px;
   border: none;
   width: 100%;
@@ -22,6 +23,7 @@ code {
 .favButton:hover{
   background-color:rgba(75, 38, 240, 0.5); 
 }
+
 
 h1 {
   text-align: center;

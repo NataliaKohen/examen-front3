@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../index.css';
+import CardForm from './CardForm';
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
@@ -30,9 +31,7 @@ const Form = () => {
   return (
     <div>
       {mostrar ? (
-        <h3>
-          **Gracias {user.name} , te contactaremos cuando antes vía mail**
-        </h3>
+        <CardForm  user={user}/>
       ) : (
         <form onSubmit={handleSubmit}>
           <label>Name</label>

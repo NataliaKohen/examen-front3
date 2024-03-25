@@ -14,10 +14,8 @@ const Card = ({ dentista }) => {
   return (
     <div className="card">
       <img src="images/doctor.jpg" alt="imagen dentista" />
-      {/* <h5>{id}</h5> */}
       <Link to={`/dentist/${id}`} className='card-a'>{name}</Link>
       <h4> {id} {username}</h4>
-
       <button
         className="favButton"
         onClick={() => dispatch({ type: 'ADD_FAV', payload: dentista })}
