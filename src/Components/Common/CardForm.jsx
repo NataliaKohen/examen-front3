@@ -1,10 +1,10 @@
 
 
 const CardForm = ({user}) => {
-  
+  const capitalizedName = user.name.charAt(0).toUpperCase() + user.name.slice(1);
   return (
     <h3>
-    **Gracias {user.name} , te contactaremos cuando antes vía mail**
+    **Gracias {capitalizedName} , te contactaremos cuando antes vía mail**
   </h3>
   )
 }
