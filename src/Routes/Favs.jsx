@@ -4,10 +4,6 @@ import { useDentistState } from '../Components/utils/global.context';
 
 const Favs = () => {
   const { state, dispatch } = useDentistState();
- 
- 
-
-  
 
   return (
     <>
