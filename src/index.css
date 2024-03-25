@@ -17,6 +17,10 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+.favButton:hover{
+  background-color:rgba(75, 38, 240, 0.5); 
 }
 
 h1 {
@@ -26,6 +30,7 @@ h1 {
   display:flex;
   justify-content: space-around;
   height: 70px;
+  background-color: rgba(243, 220, 225, 0.5);
 
 }
 nav {
@@ -33,7 +38,7 @@ nav {
   width: 80vw;
   justify-content: flex-end;
   padding: 1rem;
-  background-color: rgba(233, 152, 170, 0.5);
+ 
 }
 
 a {
@@ -83,7 +88,7 @@ form {
 
 .card {
   display: flex;
-  background-color: rgb(243, 236, 241);
+  /* background-color: rgb(243, 236, 241); */
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
@@ -154,5 +159,14 @@ tr:nth-child(even) {
   width: 24px;
   height: 24px;
   margin-left: 16px;
+
+}
+.btn-moon{
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  display:flex;
+  justify-content: flex-end;
+  
 
 }

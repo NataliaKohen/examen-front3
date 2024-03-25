@@ -7,7 +7,7 @@ const Navbar = () => {
   const { state, dispatch } = useDentistState();
 
   return (
-    <div className={`${state.theme} container-nav`}>
+    <div className={`${state.theme} container-nav `}>
       <h2>DH ODONTO</h2>
       <nav>
         <Link to="/home">Home</Link>
@@ -16,8 +16,8 @@ const Navbar = () => {
 
         {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button onClick={() => dispatch({ type: 'CHANGE_THEME' })}>
-          <img className="icon" src="/images/luna.svg" alt="luna" />
+        <button onClick={() => dispatch({ type: 'CHANGE_THEME' })} className='btn-moon'>
+          <img className="icon " src="/images/luna.svg" alt="luna" />
         </button>
       </nav>
     </div>

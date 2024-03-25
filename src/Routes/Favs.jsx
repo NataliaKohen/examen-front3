@@ -1,11 +1,11 @@
 import Card from '../Components/Common/Card';
 import { useDentistState } from '../Components/utils/global.context';
-import '../index.css'
+import '../index.css';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
   const { state, dispatch } = useDentistState();
- 
+
   return (
     <main className={state.theme}>
       <h1>Dentists Favs</h1>
@@ -18,7 +18,13 @@ const Favs = () => {
                 <h3>{favorite.username}</h3>
                 <img src="images/doctor.jpg" alt="imagen dentista" />
 
-                <button onClick={()=>dispatch({type:"REMOVE_FAV", payload:favorite.id})}>Remove favorites</button>
+                <button
+                  onClick={() =>
+                    dispatch({ type: 'REMOVE_FAV', payload: favorite.id })
+                  }
+                >
+                  Remove favorite
+                </button>
               </div>
             ))
           : null}
