@@ -3,30 +3,26 @@ import { Link } from 'react-router-dom';
 import '../../index.css';
 
 const Card = ({ dentista }) => {
+  const { name, username, id } = dentista;
 
-  const { name, username, id}=dentista
- 
-  
-  const {state, dispatch}= useDentistState();
-  
+  const { state, dispatch } = useDentistState();
+
+  // En cada card deberan mostrar en name - username y el id */
+  // No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */
+  // Ademas deberan integrar la logica para guardar cada Card en el localStorage */
+
   return (
     <div className="card">
-      <h5>{id}</h5>
-      <h2>{name}</h2>
-      <h3>{username}</h3>
       <img src="images/doctor.jpg" alt="imagen dentista" />
-      {/* En cada card deberan mostrar en name - username y el id */}
+      {/* <h5>{id}</h5> */}
+      <Link to={`/dentist/${id}`} className='card-a'>{name}</Link>
+      <h4> {id} {username}</h4>
 
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-      <Link to="/dentist/:id">Ver detalle</Link>
-
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-
-      <button className="favButton"
-         onClick={()=>dispatch({type:"ADD_FAV", payload: dentista })}
-         
-         >
-        Add fav
+      <button
+        className="favButton"
+        onClick={() => dispatch({ type: 'ADD_FAV', payload: dentista })}
+      >
+        Add fav ⭐
       </button>
     </div>
   );

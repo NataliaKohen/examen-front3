@@ -24,18 +24,33 @@ const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
   return (
-    <div className={state.theme}>
-      <div className="card-grid">
-        <h4>Id dentist: {dentistSelected.id}</h4>
-        <h3>Name:{dentistSelected.name}</h3>
-        <h4>Email: {dentistSelected.email}</h4>
-        <h5>Phone: {dentistSelected.phone}</h5>
-        <h5>Website: {dentistSelected.website}</h5>
-        <img src="/public/images/doctor.jpg" alt="imagen dentista" />
+    <main className={state.theme}>
+      <div >
+      <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{dentistSelected.id}</td>
+          <td>{dentistSelected.name}</td>
+          <td>{dentistSelected.email}</td>
+          <td>{dentistSelected.phone}</td>
+          <td>{dentistSelected.website}</td>
+        </tr>
+      </tbody>
+    </table>
+      
         {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
         {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       </div>
-    </div>
+    </main>
   );
 };
 

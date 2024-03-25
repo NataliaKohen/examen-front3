@@ -22,11 +22,16 @@ code {
 h1 {
   text-align: center;
 }
+.container-nav{
+  display:flex;
+  justify-content: space-around;
+  height: 70px;
 
+}
 nav {
   display: flex;
-  width: 100vw;
-  justify-content: flex-start;
+  width: 80vw;
+  justify-content: flex-end;
   padding: 1rem;
   background-color: rgba(233, 152, 170, 0.5);
 }
@@ -36,6 +41,10 @@ a {
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
+}
+.card-a {
+  font-size: 1.17em;
+  font-weight: bold;
 }
 a:hover {
   color: rgb(136, 136, 136);
@@ -50,8 +59,8 @@ footer {
   bottom: 0;
   width: 100%;
   height: 40px;
-  margin-top: 13rem;
-  background-color: rgba(233, 152, 170, 0.5);
+  margin-top: 5rem;
+  background-color: rgba(235, 75, 110, 0.5);
 }
 
 footer > img {
@@ -74,6 +83,7 @@ form {
 
 .card {
   display: flex;
+  background-color: rgb(243, 236, 241);
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
@@ -108,9 +118,10 @@ form {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: 90%;
   display: table;
   border: 1px solid #ccc;
+  margin: 50px
 }
 
 td,
@@ -138,4 +149,10 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
   padding: 30px;
+}
+.icon{
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+
 }

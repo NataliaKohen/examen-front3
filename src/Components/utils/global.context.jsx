@@ -7,12 +7,18 @@ export const initialState = {
 
 const dentistReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_FAV":{
-      const newFavs= new Set( [...state.favs, action.payload] )
-      return { ...state, favs: [...newFavs]};
+    case 'ADD_FAV': {
+      const newFavs = new Set([...state.favs, action.payload]);
+      return { ...state, favs: [...newFavs] };
     }
-   
-    case "CHANGE_THEME":
+    case 'REMOVE_FAV': {
+      let myfavs = state.favs.filter(
+        (favorites) => favorites.id !== action.payload
+      );
+      return { ...state, favs: myfavs };
+    }
+
+    case 'CHANGE_THEME':
       return { ...state, theme: state.theme === 'light' ? 'dark' : 'light' };
     default:
       return state;
@@ -32,3 +38,4 @@ export const ContextProvider = ({ children }) => {
   );
 };
 export const useDentistState = () => useContext(ContextGlobal);
+

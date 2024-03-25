@@ -24,7 +24,7 @@ console.log(state)
       <div className="card-grid">
         {/* Aqui deberias renderizar las cards */}
         {dentist.map((dentista) => (
-          <Card key={dentista.id} dentista={dentista} />
+          <Card key={dentista.id} id={dentista.id} name={dentista.name} username={dentista.username} dentista={dentista} />
         ))}
       </div>
     </main>
