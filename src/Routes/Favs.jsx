@@ -1,4 +1,3 @@
-import Card from '../Components/Common/Card';
 import { useDentistState } from '../Components/utils/global.context';
 import '../index.css';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -14,15 +13,19 @@ const Favs = () => {
           ? state.favs.map((favorite) => (
               <div className="card" key={favorite.id}>
                 <h3>{favorite.name}</h3>
-                <h4> {favorite.id} {favorite.username}</h4>
+                <h4>
+                  {' '}
+                  {favorite.id} {favorite.username}
+                </h4>
                 <img src="images/doctor.jpg" alt="imagen dentista" />
 
-                <button className='favButton'
+                <button
+                  className="favButton"
                   onClick={() =>
                     dispatch({ type: 'REMOVE_FAV', payload: favorite.id })
                   }
                 >
-                 <Delete color='disabled'/>
+                  <Delete color="disabled" />
                 </button>
               </div>
             ))

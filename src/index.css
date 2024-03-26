@@ -18,29 +18,27 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
-.favButton:hover{
-  background-color:rgba(75, 38, 240, 0.5); 
+.favButton:hover {
+  background-color: rgba(75, 38, 240, 0.5);
 }
-
 
 h1 {
   text-align: center;
 }
-.container-nav{
-  display:flex;
+.container-nav {
+  display: flex;
   justify-content: space-around;
   height: 70px;
-  background-color: rgba(223, 217, 235, 0.5);
-
+  background-color: rgba(124, 126, 235, 0.5);
 }
 nav {
   display: flex;
   width: 80vw;
   justify-content: flex-end;
   padding: 1rem;
- 
+  
 }
 
 a {
@@ -86,8 +84,15 @@ form {
   width: 300px;
   height: 100px;
   margin: 0 auto;
-}
 
+}
+input{
+  border-radius: 5px;
+  padding:5px
+}
+.btn-form{
+  padding:5px
+}
 .card {
   display: flex;
   background-color: rgb(252, 252, 250);
@@ -112,7 +117,6 @@ form {
   width: 90vw;
   flex-wrap: wrap;
   margin: 0 auto;
-
 }
 .card > img {
   width: 180px;
@@ -125,7 +129,7 @@ table {
   width: 90%;
   display: table;
   border: 1px solid #ccc;
-  margin: 50px
+  margin: 50px;
 }
 
 td,
@@ -148,30 +152,30 @@ tr:nth-child(even) {
   color: white;
 }
 .err {
-  color: red;
+  background-color: rgb(208, 224, 236);
+  color: rgb(15, 15, 15);
+  padding: 5px 0px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .container {
   display: flex;
   justify-content: center;
   padding: 30px;
 }
-.icon{
+.icon {
   width: 24px;
   height: 24px;
   margin-left: 16px;
-
 }
-.btn-moon{
+.btn-moon {
   width: 34px;
   height: 34px;
   text-align: center;
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   border: none;
-  
-
 }
-main{
+main {
   padding: 25px;
-  background-color: #ddddc3;
 }

@@ -33,7 +33,7 @@ const Form = () => {
       {mostrar ? (
         <CardForm  user={user}/>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             type="text"
@@ -48,8 +48,7 @@ const Form = () => {
             placeholder="Enter your email"
             onChange={handleOnchange}
           />
-          <button type="submit">Submit</button>
-
+          <button type="submit" className='btn-form'>Submit</button>
           {error && (
             <p className="err">
               **Por favor verifique su información nuevamente**
