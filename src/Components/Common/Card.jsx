@@ -1,7 +1,7 @@
 import { useDentistState } from '../utils/global.context';
 import { Link } from 'react-router-dom';
 import '../../index.css';
-
+import  Star  from '@mui/icons-material/Star';
 const Card = ({ dentista }) => {
   const { name, username, id } = dentista;
 
@@ -20,8 +20,7 @@ const Card = ({ dentista }) => {
         className="favButton"
         onClick={() => dispatch({ type: 'ADD_FAV', payload: dentista })}
       >
-        Add fav ⭐
-      </button>
+     <Star color="secondary"/>      </button>
     </div>
   );
 };

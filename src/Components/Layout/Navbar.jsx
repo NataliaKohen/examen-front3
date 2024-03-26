@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useDentistState } from '../utils/global.context';
 import '../../index.css';
+import { Button } from '@mui/material';
+import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
@@ -16,9 +19,12 @@ const Navbar = () => {
 
         {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button onClick={() => dispatch({ type: 'CHANGE_THEME' })} className='btn-moon'>
-          <img className="icon " src="/images/luna.svg" alt="luna" />
-        </button>
+
+        <Button
+          onClick={() => dispatch({ type: 'CHANGE_THEME' })}
+          variant="outlined" 
+        > {state.theme === 'light' ? <DarkModeOutlined  /> : <WbSunnyIcon  />}
+        </Button>
       </nav>
     </div>
   );

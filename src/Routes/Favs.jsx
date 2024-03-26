@@ -2,7 +2,7 @@ import Card from '../Components/Common/Card';
 import { useDentistState } from '../Components/utils/global.context';
 import '../index.css';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
+import { Delete } from '@mui/icons-material';
 const Favs = () => {
   const { state, dispatch } = useDentistState();
 
@@ -22,7 +22,7 @@ const Favs = () => {
                     dispatch({ type: 'REMOVE_FAV', payload: favorite.id })
                   }
                 >
-                  Remove favorite
+                 <Delete color='disabled'/>
                 </button>
               </div>
             ))

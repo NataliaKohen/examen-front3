@@ -32,7 +32,7 @@ h1 {
   display:flex;
   justify-content: space-around;
   height: 70px;
-  background-color: rgba(243, 220, 225, 0.5);
+  background-color: rgba(223, 217, 235, 0.5);
 
 }
 nav {
@@ -67,7 +67,7 @@ footer {
   width: 100%;
   height: 40px;
   margin-top: 5rem;
-  background-color: rgba(235, 75, 110, 0.5);
+  background-color: rgba(124, 126, 235, 0.5);
 }
 
 footer > img {
@@ -90,13 +90,14 @@ form {
 
 .card {
   display: flex;
-  /* background-color: rgb(243, 236, 241); */
+  background-color: rgb(252, 252, 250);
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 20px;
   max-height: 100%;
 }
 
@@ -111,11 +112,7 @@ form {
   width: 90vw;
   flex-wrap: wrap;
   margin: 0 auto;
-  /* background-color: black;
-  display: grid;
-  align-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center; */
+
 }
 .card > img {
   width: 180px;
@@ -144,8 +141,9 @@ tr:nth-child(even) {
 
 .dark {
   background-color: #12121296;
-  color: white;
+  color: rgb(160, 146, 146);
 }
+
 .dark > a {
   color: white;
 }
@@ -169,6 +167,11 @@ tr:nth-child(even) {
   text-align: center;
   display:flex;
   justify-content: flex-end;
+  border: none;
   
 
+}
+main{
+  padding: 25px;
+  background-color: #ddddc3;
 }
