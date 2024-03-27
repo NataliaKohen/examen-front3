@@ -16,6 +16,7 @@ code {
   margin: 5px;
   padding: 10px;
   border: none;
+  border-radius: 5px;
   width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -33,12 +34,11 @@ h1 {
   height: 70px;
   background-color: rgba(124, 126, 235, 0.5);
 }
-nav {
+.navbar {
   display: flex;
   width: 80vw;
   justify-content: flex-end;
   padding: 1rem;
-  
 }
 
 a {
@@ -84,14 +84,14 @@ form {
   width: 300px;
   height: 100px;
   margin: 0 auto;
-
 }
-input{
+input {
   border-radius: 5px;
-  padding:5px
+  padding: 5px;
 }
-.btn-form{
-  padding:5px
+.btn-form {
+  padding: 5px;
+  background-color: rgb(153, 162, 236);
 }
 .card {
   display: flex;
@@ -137,23 +137,31 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  background-color: #c6b8f8;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ca2727;
 }
 
 .dark {
   background-color: #12121296;
-  color: rgb(160, 146, 146);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  color: rgb(245, 237, 237);
 }
 
 .dark > a {
-  color: white;
+  color: rgb(105, 82, 82);
+}
+.dark h4 {
+  color: #5e4a4a;
+}
+.dark a {
+  color: rgb(173, 177, 156);
 }
 .err {
   background-color: rgb(208, 224, 236);
-  color: rgb(15, 15, 15);
+  color: rgb(80, 72, 72);
   padding: 5px 0px;
   border-radius: 5px;
   font-weight: bold;
@@ -173,8 +181,9 @@ tr:nth-child(even) {
   height: 34px;
   text-align: center;
   display: flex;
-  justify-content: flex-end;
-  border: none;
+  justify-content: center;
+  border: 1px solid rgb(162, 161, 163);
+  background-color: rgba(124, 126, 235, 0.5);
 }
 main {
   padding: 25px;

@@ -1,4 +1,8 @@
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer,useEffect } from 'react';
+
+export const ContextGlobal = createContext();
+
+//falta localStorage
 
 export const initialState = {
   theme: 'light',
@@ -25,12 +29,28 @@ const dentistReducer = (state, action) => {
   }
 };
 
-export const ContextGlobal = createContext();
-
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
   const [state, dispatch] = useReducer(dentistReducer, initialState);
+
+
+  // Cargar los favoritos desde el localStorage al inicio
+  useEffect(() => {
+    const LocalStorageFavs = localStorage.getItem('favs');
+    if (LocalStorageFavs) {
+      dispatch({ type: 'ADD_FAV', payload: JSON.parse(LocalStorageFavs) });
+    }//no me queda tan claro, revisar
+  }, []);
+
+  // Guardar los favoritos en el localStorage cada vez que cambien
+  useEffect(() => {
+    localStorage.setItem('favs', JSON.stringify(Array.from(state.favs)));
+  }, [state.favs]);
+
+
+
+
+
+  
   return (
     <ContextGlobal.Provider value={{ state, dispatch }}>
       {children}
@@ -38,4 +58,3 @@ export const ContextProvider = ({ children }) => {
   );
 };
 export const useDentistState = () => useContext(ContextGlobal);
-

@@ -2,7 +2,7 @@ import "../../index.css"
 import { useDentistState } from "../utils/global.context"
 
 const Footer = () => {
-  const{state,dispatch}=useDentistState()
+  const{state}=useDentistState()
   return (
     <footer className={state.theme }>
         <img src="/images/DH.png" alt='DH-logo' />
@@ -11,7 +11,7 @@ const Footer = () => {
         <img className='icon'src="/images/ico-tiktok.png" alt='logo Tiktok' />
         <img className='icon'src="/images/ico-whatsapp.png" alt='logo Whatsapp' />
        
-         
+        
 
     </footer>
   )

@@ -3,8 +3,7 @@ import '../../index.css';
 import CardForm from './CardForm';
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
-
+ 
   const [user, setUser] = useState({
     name: '',
     email: '',

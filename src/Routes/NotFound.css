@@ -1,7 +1,15 @@
-.error{
-    background-color: black;
-    height: 1000px;
-    font-size: 50px;
-    padding: 50px;
-    color: red
+.container-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  background-color: rgb(48, 46, 46);
+  width: 600px;
+  height: 300px;
+  padding: 50px;
+  color: rgb(235, 17, 17);
+  text-align: center;
+  border-radius: 20px;
 }

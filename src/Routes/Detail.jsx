@@ -21,7 +21,7 @@ const Detail = () => {
   }, [id]);
   console.log(dentistSelected);
 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  
 
   return (
     <main className={state.theme}>
