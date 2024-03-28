@@ -4,20 +4,29 @@ import Card from '../Components/Common/Card';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  const { state  } = useDentistState();
+  const { state,dispatch  } = useDentistState();
 
   return (
-    <main className={state.theme}>
+    <>
+    <main className={state.theme} >
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
-      {state.favs.length > 0 && state.favs.map((favorite) => (
+      <div className="card-grid container">
+      {state.favs.length > 0 && (
+      <>
+      {state.favs.map((favorite) => (
   <Card key={favorite.id} dentista={favorite} />
 ))}
-
+<button  className=" centerButton"onClick={() => dispatch({ type: "REMOVE_ALL" })}>
+    Delete All 🗑️
+  </button>
+</>)}
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
       </div>
+      
     </main>
+    
+  </>
   );
 };
 

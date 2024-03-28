@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className='navbar'>
         <Link to="/">Home</Link>
         <Link to="/favs">Favorites</Link>
-        <Link to="/contacto">Contact</Link>
+        <Link to="/contact">Contact</Link>
         <button
           onClick={() => dispatch({ type: 'CHANGE_THEME' })}
          className='themeToggleButton'

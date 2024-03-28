@@ -184,9 +184,22 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
   border: 1px solid rgb(162, 161, 163);
-  background:linear-gradient(to right, #5d6c7c, #40494d)
- 
+  background: linear-gradient(to right, #5d6c7c, #40494d);
 }
 main {
   padding: 25px;
+}
+.centerButton {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 50px;
+}
+.message {
+  background-color: rgb(3, 41, 70);
+  color: rgb(247, 242, 242);
+  padding: 5px 15px;
+  border-radius: 5px;
+ height:100px ;
+  width: 25vw;
 }
