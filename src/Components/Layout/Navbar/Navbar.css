@@ -1,13 +1,10 @@
-.container-nav {
-    display: flex;
-    justify-content: space-around;
-    height: 70px;
-    background-color: rgba(124, 126, 235, 0.5);
-  }
+
   .navbar {
     display: flex;
     width: 80vw;
     justify-content: flex-end;
     padding: 1rem;
+   
+  
   }
   

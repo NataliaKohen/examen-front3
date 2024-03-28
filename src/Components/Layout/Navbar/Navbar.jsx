@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useDentistState } from '../../utils/global.context';
-import './Navbar.css';
 import '../../../index.css'
+import './Navbar.css';
 
 
 
@@ -9,7 +9,7 @@ const Navbar = () => {
   const { state, dispatch } = useDentistState();
 
   return (
-    <div className={`${state.theme} container-nav `}>
+    <div className={`container-nav ${state.theme}`}>
       <h2>DH ODONTO</h2>
       <div className='navbar'>
         <Link to="/">Home</Link>
