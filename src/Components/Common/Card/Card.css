@@ -40,7 +40,6 @@
   }
   
   .card:hover {
-    background-color: rgb(236, 236, 222);
     border: 0.5px solid rgb(181, 199, 82);
   }
   
