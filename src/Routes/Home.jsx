@@ -7,7 +7,8 @@ const Home = () => {
   const { state } = useDentistState();
   const [dentist, setDentist] = useState([]);
 console.log(state)
-  useEffect(() => {
+  
+useEffect(() => {
     const getDataDentist = async () => {
       let res = await getData();
       setDentist(res);

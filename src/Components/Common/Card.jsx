@@ -5,10 +5,19 @@ import '../../index.css';
 
 const Card = ({ dentista }) => {
   const { name, username, id } = dentista;
-
   const { state, dispatch } = useDentistState();
 
   // Ademas deberan integrar la logica para guardar cada Card en el localStorage */
+// Verificar si el dentista está marcado como favorito
+const isFavorite = state.favs.some(fav => fav.id === id);
+
+const handleToggleFavorite = () => {
+  if (isFavorite) {
+    dispatch({ type: 'REMOVE_FAV', payload: id });
+  } else {
+    dispatch({ type: 'ADD_FAV', payload: dentista });
+  }
+};
 
   return (
     <div className="card">
@@ -17,12 +26,9 @@ const Card = ({ dentista }) => {
         {name}
       </Link>
       <h4> {username}</h4>
-      <button
-        className="favButton"
-        onClick={() => dispatch({ type: 'ADD_FAV', payload: dentista })}
-      >
-        ⭐
- 
+    
+      <button className="favButton" onClick={handleToggleFavorite}>
+        {isFavorite ? '🗑️' : '⭐'}
       </button>
     </div>
   );

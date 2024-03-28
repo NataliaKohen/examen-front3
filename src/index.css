@@ -176,14 +176,16 @@ tr:nth-child(even) {
   height: 24px;
   margin-left: 16px;
 }
-.btn-moon {
+.themeToggleButton {
   width: 34px;
   height: 34px;
+  font-size: large;
   text-align: center;
   display: flex;
   justify-content: center;
   border: 1px solid rgb(162, 161, 163);
-  background-color: rgba(124, 126, 235, 0.5);
+  background:linear-gradient(to right, #5d6c7c, #40494d)
+ 
 }
 main {
   padding: 25px;

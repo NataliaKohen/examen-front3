@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useDentistState } from '../utils/global.context';
 import '../../index.css';
-import DarkModeOutlined from '@mui/icons-material/DarkModeOutlined';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
+
 
 
 const Navbar = () => {
@@ -17,8 +16,8 @@ const Navbar = () => {
         <Link to="/contacto">Contact</Link>
         <button
           onClick={() => dispatch({ type: 'CHANGE_THEME' })}
-         className='btn-moon'
-        > {state.theme === 'light' ? <DarkModeOutlined  /> : <WbSunnyIcon  />}
+         className='themeToggleButton'
+        >  {state.theme === 'light' ? '🌙' : '☀️'}
         </button>
       </div>
     </div>
