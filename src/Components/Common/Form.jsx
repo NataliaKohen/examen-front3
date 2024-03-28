@@ -28,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div >
       {mostrar ? (
         <CardForm  user={user}/>
       ) : (
@@ -49,9 +49,11 @@ const Form = () => {
           />
           <button type="submit" className='btn-form'>Submit</button>
           {error && (
-            <p className="err">
-              **Por favor verifique su información nuevamente**
-            </p>
+            <>
+            <p className="err">**Please verify your information again**</p>
+            <p >**Por favor verifique su información nuevamente**</p>
+            
+            </>
           )}
         </form>
       )}

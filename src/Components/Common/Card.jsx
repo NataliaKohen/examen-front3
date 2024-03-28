@@ -20,7 +20,7 @@ const handleToggleFavorite = () => {
 };
 
   return (
-    <div className="card">
+    <div className={`${state.theme} card`}>
       <img src="images/doctor.jpg" alt="imagen dentista" />
       <Link to={`/dentist/${id}`} className="card-a">
         {name}
@@ -28,7 +28,7 @@ const handleToggleFavorite = () => {
       <h4> {username}</h4>
     
       <button className="favButton" onClick={handleToggleFavorite}>
-        {isFavorite ? '🗑️' : '⭐'}
+        {isFavorite ? '★' : '☆'}
       </button>
     </div>
   );

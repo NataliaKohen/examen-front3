@@ -1,7 +1,6 @@
 import { useDentistState } from '../Components/utils/global.context';
 import '../index.css';
 import Card from '../Components/Common/Card';
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
   const { state,dispatch  } = useDentistState();
