@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../../index.css';
+import './Form.css';
 import CardForm from './CardForm';
 
 const Form = () => {
@@ -51,7 +51,7 @@ const Form = () => {
           {error && (
             <>
             <p className="err">**Please verify your information again**</p>
-            <p >**Por favor verifique su información nuevamente**</p>
+            {/* <p >**Por favor verifique su información nuevamente**</p> */}
             
             </>
           )}

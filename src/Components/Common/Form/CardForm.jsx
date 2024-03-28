@@ -1,5 +1,4 @@
 
-
 const CardForm = ({user}) => {
   const capitalizedName = user.name.charAt(0).toUpperCase() + user.name.slice(1);
   return (

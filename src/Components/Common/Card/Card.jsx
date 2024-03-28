@@ -1,7 +1,7 @@
-import { useDentistState } from '../utils/global.context';
+import { useDentistState } from '../../utils/global.context';
 import { Link } from 'react-router-dom';
 
-import '../../index.css';
+import './Card.css';
 
 const Card = ({ dentista }) => {
   const { name, username, id } = dentista;

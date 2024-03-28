@@ -1,5 +1,5 @@
-import "../../index.css"
-import { useDentistState } from "../utils/global.context"
+import "./Footer.css"
+import { useDentistState } from "../../utils/global.context"
 
 const Footer = () => {
   const{state}=useDentistState()

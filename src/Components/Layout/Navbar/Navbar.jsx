@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useDentistState } from '../utils/global.context';
-import '../../index.css';
+import { useDentistState } from '../../utils/global.context';
+import './Navbar.css';
+import '../../../index.css'
 
 
 

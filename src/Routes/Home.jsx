@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Card from '../Components/Common/Card';
+import Card from '../Components/Common/Card/Card';
 import { getData } from '../api/dentist';
 import { useDentistState } from '../Components/utils/global.context';
 

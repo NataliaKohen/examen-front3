@@ -3,8 +3,8 @@ import Home from './Routes/Home';
 import Layout from './Components/Layout/Layout';
 import Favs from './Routes/Favs';
 import Detail from './Routes/Detail';
-import Contact from './Routes/Contact';
-import NotFound from './Routes/NotFound';
+import Contact from './Routes/Contact/Contact';
+import NotFound from './Routes/NotFound/NotFound';
 import { ContextProvider } from './Components/utils/global.context';
 
 function App() {

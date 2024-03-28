@@ -1,6 +1,6 @@
-import Form from '../Components/Common/Form';
-import {useDentistState} from '../Components/utils/global.context'
-import '../index.css'
+import Form from '../../Components/Common/Form/Form';
+import {useDentistState} from '../../Components/utils/global.context'
+import './Contact.css'
 
 
 
