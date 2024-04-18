@@ -6,9 +6,8 @@ import { useDentistState } from '../Components/utils/global.context';
 const Home = () => {
   const { state } = useDentistState();
   const [dentist, setDentist] = useState([]);
-console.log(state)
-  
-useEffect(() => {
+
+  useEffect(() => {
     const getDataDentist = async () => {
       let res = await getData();
       setDentist(res);
@@ -16,14 +15,18 @@ useEffect(() => {
     getDataDentist();
   }, []);
 
-  console.log(dentist);
-
   return (
     <main className={state.theme}>
       <h1>Clínica Odontológica</h1>
       <div className="card-grid">
         {dentist.map((dentista) => (
-          <Card key={dentista.id} id={dentista.id} name={dentista.name} username={dentista.username} dentista={dentista} />
+          <Card
+            key={dentista.id}
+            id={dentista.id}
+            name={dentista.name}
+            username={dentista.username}
+            dentista={dentista}
+          />
         ))}
       </div>
     </main>
