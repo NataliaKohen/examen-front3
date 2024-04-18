@@ -23,8 +23,7 @@ const Favs = () => {
               </button>
             </>
           )}
-          {/* este componente debe consumir los destacados del localStorage */}
-          {/* Deberan renderizar una Card por cada uno de ellos */}
+         
         </div>
       </main>
     </>
@@ -32,3 +31,5 @@ const Favs = () => {
 };
 
 export default Favs;
+ {/* este componente debe consumir los destacados del localStorage */}
+          {/* Deberan renderizar una Card por cada uno de ellos */}
